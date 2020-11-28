@@ -40,9 +40,9 @@ $valor_dropshipping.set_InnerText($produto.valor_dropshipping) #insere o valor d
 $dimensoes = $produto.dimensao_caixa_cm #adquire as dimensões originais que precisam ser alteradas
 $dimensoes = $dimensoes -replace '\s','' #deleta os espaços em branco
 $CharArray = $dimensoes.Split("x") #corta os três valores utilizando x como referencia
-$dim_altura = $CharArray[0] #cria o valor dim_altura
-$dim_largura = $CharArray[1] #cria o valor dim_largura
-$dim_comprimento = $CharArray[2] #cria o valor dim_comprimento
+$dim_altura = $CharArray[2] #cria o valor dim_altura
+$dim_largura = $CharArray[0] #cria o valor dim_largura
+$dim_comprimento = $CharArray[1] #cria o valor dim_comprimento
 $dimensao_altura = $xmldoc.CreateElement("dimensao_altura") #Cria elemento xml dimensao_altura
 $dimensao_altura.set_InnerText($dim_altura) #insere o valor do elemento XML dimensao_altura
 $dimensao_largura = $xmldoc.CreateElement("dimensao_largura") #Cria o elemento XML dimensao_largura
