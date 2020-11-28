@@ -77,6 +77,6 @@ foreach ($produto in $xmlDoc.dados.produto) #Faz um condicional que passa por ca
     }
 }
 $data=Get-Date -format "yyyyMMdd" #adquire data para o nome do arquivo
-$xmldoc.Save("$folder\$data-XMLmodificado.xml") #salva o arquivo modificado
+$xmldoc.Save("$folder\XMLmodificado-$data.xml") #salva o arquivo modificado
 write-output "Seu arquivo foi salvo em $folder\XMLmodificado.xml"
 pause
